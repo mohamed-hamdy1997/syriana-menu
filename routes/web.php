@@ -13,4 +13,12 @@
 
 Route::get('/', function () {
     return view('welcome');
+})->name('home');
+\Illuminate\Support\Facades\Auth::routes();
+
+Route::middleware('admin')->group(function () {
+    Route::resource('products', ProductController::class);
+    Route::resource('categories', CategoryController::class);
 });
+
+Route::post('change-lang', [\App\Http\Controllers\SettingController::class,'changeLang'])->name('changeLang');
