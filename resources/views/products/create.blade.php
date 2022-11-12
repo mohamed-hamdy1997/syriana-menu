@@ -22,12 +22,45 @@
                 @enderror
             </div>
 
+            <div class="form-group">
+                <label for="nameAr">@lang('products.name_ar')</label>
+                <input type="text" name="name_ar" class="form-control @error('name_ar') is-invalid @enderror" id="nameAr"
+                       placeholder="@lang('products.name_ar')" value="{{ old('name_ar') }}">
+                @error('name_ar')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+            </div>
+
 
             <div class="form-group">
                 <label for="description">@lang('products.description')</label>
                 <textarea name="description" class="form-control @error('description') is-invalid @enderror"
                     id="description" placeholder="@lang('products.description')">{{ old('description') }}</textarea>
                 @error('description')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                <label for="descriptionAr">@lang('products.description_ar')</label>
+                <textarea name="description_ar" class="form-control @error('description_ar') is-invalid @enderror"
+                    id="descriptionAr" placeholder="@lang('products.description_ar')">{{ old('description_ar') }}</textarea>
+                @error('description_ar')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                <label for="price">@lang('products.price')</label>
+                <textarea name="price" class="form-control @error('price') is-invalid @enderror"
+                    id="price" placeholder="@lang('products.price')">{{ old('price') }}</textarea>
+                @error('price')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>

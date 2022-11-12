@@ -70,7 +70,10 @@ class ProductController extends Controller
 
         $product = Product::create([
             'name' => $request->name,
+            'name_ar' => $request->name_ar,
             'description' => $request->description,
+            'description_ar' => $request->description_ar,
+            'price' => $request->price,
             'image' => $image_path,
             'category_id' => $request->category_id,
         ]);
@@ -115,8 +118,11 @@ class ProductController extends Controller
     public function update(ProductUpdateRequest $request, Product $product)
     {
         $product->name = $request->name;
+        $product->name_ar = $request->name_ar;
         $product->description = $request->description;
+        $product->description_ar = $request->description_ar;
         $product->category_id = $request->category_id;
+        $product->price = $request->price;
 
         if ($request->hasFile('image')) {
             // Delete old image

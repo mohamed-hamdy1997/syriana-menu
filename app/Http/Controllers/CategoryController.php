@@ -45,6 +45,7 @@ class CategoryController extends Controller
     {
         $category = Category::create([
             'name' => $request->name,
+            'name_ar' => $request->name_ar,
         ]);
 
         if (!$category) {
@@ -66,6 +67,7 @@ class CategoryController extends Controller
     public function update(CategoryUpdateRequest $request, Category $category)
     {
         $category->name = $request->name;
+        $category->name_ar = $request->name_ar;
 
         if (!$category->save()) {
             return redirect()->back()->with('error', 'Sorry, there\'re a problem while updating category.');

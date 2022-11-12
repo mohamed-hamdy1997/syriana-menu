@@ -34,6 +34,7 @@
                     <th>@lang('products.image')</th>
                     <th>@lang('products.description')</th>
                     <th>@lang('products.category')</th>
+                    <th>@lang('products.price')</th>
                     <th>@lang('site.created_at')</th>
                     <th>@lang('site.action')</th>
                 </tr>
@@ -46,6 +47,7 @@
                     <td><img src="{{ Storage::url($product->image) }}" alt="" width="100"></td>
                     <td>{{$product->description}}</td>
                     <td>{{$product->category->name}}</td>
+                    <td>{{$product->price}}</td>
                     <td>{{$product->created_at}}</td>
                     <td>
                         <a href="{{ route('products.edit', $product) }}" class="btn btn-primary"><i

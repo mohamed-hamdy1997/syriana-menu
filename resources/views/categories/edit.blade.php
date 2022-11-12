@@ -23,6 +23,17 @@
                 @enderror
             </div>
 
+            <div class="form-group">
+                <label for="nameAr">@lang('categories.name_ar')</label>
+                <input type="text" name="name_ar" class="form-control @error('name_ar') is-invalid @enderror" id="nameAr"
+                    placeholder="@lang('categories.name_ar')" value="{{ old('name_ar', $category->name_ar) }}">
+                @error('name_ar')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
+            </div>
+
             <button class="btn btn-primary" type="submit">@lang('site.edit')</button>
         </form>
     </div>

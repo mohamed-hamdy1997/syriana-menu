@@ -19,6 +19,7 @@
                 <tr>
                     <th>ID</th>
                     <th>@lang('categories.name')</th>
+                    <th>@lang('categories.name_ar')</th>
                     <th>@lang('site.created_at')</th>
                     <th>@lang('site.action')</th>
                 </tr>
@@ -28,6 +29,7 @@
                 <tr>
                     <td>{{$category->id}}</td>
                     <td>{{$category->name}}</td>
+                    <td>{{$category->name_ar}}</td>
                     <td>{{$category->created_at}}</td>
                     <td>
                         <a href="{{ route('categories.edit', $category) }}" class="btn btn-primary"><i

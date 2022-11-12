@@ -25,6 +25,7 @@ class CategoryUpdateRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
+            'name_ar' => 'required|string|max:255',
         ];
     }
 }

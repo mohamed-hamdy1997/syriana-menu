@@ -8,5 +8,6 @@ return [
     'action' => 'الاعدادت',
     'categories' => 'الفئات',
     'products' => 'المنتجات',
+    'preview_menu' => 'عرض المنيو',
     'logout' => 'تسجيل الخروج',
 ];

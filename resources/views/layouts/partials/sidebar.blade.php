@@ -26,6 +26,12 @@
                         <p>@lang('site.products')</p>
                     </a>
                 </li>
+                <li class="nav-item has-treeview">
+                    <a href="{{ route('menu') }}" class="nav-link">
+                        <i class="nav-icon fas fa-th-large"></i>
+                        <p>@lang('site.preview_menu')</p>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link" onclick="document.getElementById('logout-form').submit()">
                         <i class="nav-icon fas fa-sign-out-alt"></i>

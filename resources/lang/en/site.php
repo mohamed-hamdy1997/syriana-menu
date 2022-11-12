@@ -8,5 +8,6 @@ return [
     'action' => 'action',
     'categories' => 'categories',
     'products' => 'products',
+    'preview_menu' => 'preview menu',
     'logout' => 'logout',
 ];
